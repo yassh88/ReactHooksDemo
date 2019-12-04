@@ -1,7 +1,11 @@
 import { ADD_PERSON } from './types';
 
 const addPerson = (person, state) => {
+  console.log('person', person)
+  console.log('state.people', [...state.people])
   const newPeople = [...state.people, person];
+  console.log('newPeople', newPeople)
+
   return {
     ...state,
     people: newPeople
